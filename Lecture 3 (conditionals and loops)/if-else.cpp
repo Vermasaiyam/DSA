@@ -20,7 +20,7 @@ int main()
     // cin >> a >> b;
     // cout << "value of a is " << a << " and b is " << b << endl;
     
-    //a = cin.get(); //1 2... ye isko character ki treh lega..isme 1 ko character lega jo 49 hota h int main
+    //a = cin.get(); //1 2... ye isko character ki treh lega..isme 1 ko character lega jo 49 hota h int main546546
     // cout << "value of a is: " << a << endl;
     
     cout << "enter the value of a: " << endl;
