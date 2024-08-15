@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 bool isPresent(int arr[][4], int target, int row, int col){
