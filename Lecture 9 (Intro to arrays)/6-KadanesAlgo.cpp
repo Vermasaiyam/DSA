@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 long long maxSubarraySum(int arr[], int n) {
-    long long maxi = LONG_MIN;
+    long long maxi = LLONG_MIN;
     long long sum = 0;
 
     int start = 0;
