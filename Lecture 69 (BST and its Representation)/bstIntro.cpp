@@ -118,6 +118,22 @@ void takeInput(node* &root){
     }
 }
 
+node* minVal(node* root){
+    node* temp = root;
+    while (temp->left != NULL){
+        temp = temp->left;
+    }
+    return temp;
+}
+
+node* maxVal(node* root){
+    node* temp = root;
+    while (temp->right != NULL){
+        temp = temp->right;
+    }
+    return temp;
+}
+
 int main(){
     node* root = NULL;
 
@@ -128,10 +144,16 @@ int main(){
     levelOrderTraversal(root);
     cout << "Printing inorder" << endl;
     inorder(root);
-    cout << "Printing preorder" << endl;
+    cout << endl << "Printing preorder" << endl;
     preorder(root);
-    cout << "Printing postorder" << endl;
+    cout << endl << "Printing postorder" << endl;
     postorder(root);
+
+    cout << endl << "Min Value ";
+    cout << minVal(root)->data;
+
+    cout << endl << "Max Value ";
+    cout << maxVal(root)->data;
 
     return 0;
 }
