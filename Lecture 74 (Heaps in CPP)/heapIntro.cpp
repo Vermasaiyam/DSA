@@ -96,23 +96,24 @@ void heapify(int arr[], int n , int i){
     return;
 }
 
+void buildMaxHeap(int arr[], int n){
+    for(int i=n/2 ; i>0 ; i--){
+        heapify(arr, n, i);
+    }
+}
+
 void heapSort(int arr[], int n){
+    buildMaxHeap(arr, n);
+
     int size = n;
     while (size > 1){
         swap(arr[1], arr[size]);
         size--;
 
-        heapify(arr, n, 1);
+        heapify(arr, size, 1);
     }
 }
 
-void buildMaxHeap(int arr[], int n){
-    buildMaxHeap(arr, n);
-
-    for(int i=n/2 ; i>0 ; i--){
-        heapify(arr, n, i);
-    }
-}
 
 int main()
 {
