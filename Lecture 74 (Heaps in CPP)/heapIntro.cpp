@@ -107,6 +107,8 @@ void heapSort(int arr[], int n){
 }
 
 void buildMaxHeap(int arr[], int n){
+    buildMaxHeap(arr, n);
+
     for(int i=n/2 ; i>0 ; i--){
         heapify(arr, n, i);
     }
@@ -127,14 +129,6 @@ int main()
 
     int arr[6] = {-1, 54,53,55,52,50};
     int n = 5;
-
-    buildMaxHeap(arr, n);
-
-    cout << "printing array ";
-    for(int i=1 ; i<=n ; i++){
-        cout << arr[i] << " ";
-    }
-    cout << endl;
 
     heapSort(arr, n);
 
